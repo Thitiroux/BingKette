@@ -1,6 +1,6 @@
 $dark: #1D1A31;
-$light: #FFF9EC;
-$cell-size: 150px;
+$light: #E8E9ED;
+$cell-size: 130px;
 $cell-size-mobile: 80px;
 
 * {
@@ -11,10 +11,41 @@ body {
     background-color: $dark;
     color: $light;
     display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     font-family: "Poppins", sans-serif;
+
+    .button {
+        a {
+            color: $light;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+
+    a {
+
+        color: #9A4C95;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    em,
+    strong {
+        color: #F08CAE;
+    }
+
+    .button {
+        background-color: #4D2D52;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 100px;
+    }
 
     h1 {
         font-size: 2rem;
@@ -24,16 +55,16 @@ body {
 
     .container {
         display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         width: 70%;
 
         #bingo-board {
             border: 1px solid #9A4C95;
             display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
             gap: 0;
             height: calc($cell-size * 5);
             width: calc($cell-size * 5);
@@ -41,14 +72,15 @@ body {
             @media screen and (max-width: 768px) {
                 height: calc($cell-size-mobile * 5);
                 width: calc($cell-size-mobile * 5);
-                
+
             }
 
             .bingo-cell {
                 border: 1px solid #9A4C95;
+                cursor: pointer;
                 display: flex;
-                    align-items: center;
-                    justify-content: center;
+                align-items: center;
+                justify-content: center;
                 padding: 0.7rem;
                 position: relative;
                 text-align: center;
@@ -65,19 +97,22 @@ body {
                     opacity: 0.5;
                 }
 
-                .check-img, .free-cell {
+                .check-img,
+                .free-cell {
                     position: absolute;
                     height: $cell-size;
                     width: $cell-size;
+
                     @media screen and (max-width: 768px) {
                         height: $cell-size-mobile;
                         width: $cell-size-mobile;
-                        
+
                     }
                 }
             }
         }
     }
+
     .modal {
         display: none;
         position: fixed;
@@ -89,33 +124,36 @@ body {
         overflow: auto;
         background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.4);
-    
+
         .modal-content {
             background-color: #1D1A31;
             margin: 15% auto;
             padding: 20px;
             border: 1px solid #888;
             width: 40%;
+
             .close {
                 color: #aaa;
                 float: right;
                 font-size: 28px;
                 font-weight: bold;
-                &:hover, &:focus {
+
+                &:hover,
+                &:focus {
                     color: black;
                     text-decoration: none;
                     cursor: pointer;
                 }
             }
-            
+
             .modal-text {
                 padding: 20px;
-                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
-            
+
         }
     }
 }
-
-
-
