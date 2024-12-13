@@ -16,16 +16,11 @@ body {
     justify-content: center;
     font-family: "Poppins", sans-serif;
 
-    audio {
-        margin-bottom: 20px;
-    }
+    a {
+        .button {
+            cursor: pointer;
 
-    .button {
-        cursor: pointer;
-        a {
             color: $light;
-            font-weight: bold;
-            text-decoration: none;
         }
     }
 
@@ -47,8 +42,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 50px;
-        width: 100px;
+        padding: 1rem;
+        margin: 2rem;
     }
 
     h1 {
