@@ -1,0 +1,121 @@
+$dark: #1D1A31;
+$light: #FFF9EC;
+$cell-size: 150px;
+$cell-size-mobile: 80px;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $dark;
+    color: $light;
+    display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    font-family: "Poppins", sans-serif;
+
+    h1 {
+        font-size: 2rem;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        width: 70%;
+
+        #bingo-board {
+            border: 1px solid #9A4C95;
+            display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+            gap: 0;
+            height: calc($cell-size * 5);
+            width: calc($cell-size * 5);
+
+            @media screen and (max-width: 768px) {
+                height: calc($cell-size-mobile * 5);
+                width: calc($cell-size-mobile * 5);
+                
+            }
+
+            .bingo-cell {
+                border: 1px solid #9A4C95;
+                display: flex;
+                    align-items: center;
+                    justify-content: center;
+                padding: 0.7rem;
+                position: relative;
+                text-align: center;
+                height: $cell-size;
+                width: $cell-size;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 0.7rem;
+                    height: $cell-size-mobile;
+                    width: $cell-size-mobile;
+                }
+
+                .bingo-cell-text-opacity {
+                    opacity: 0.5;
+                }
+
+                .check-img, .free-cell {
+                    position: absolute;
+                    height: $cell-size;
+                    width: $cell-size;
+                    @media screen and (max-width: 768px) {
+                        height: $cell-size-mobile;
+                        width: $cell-size-mobile;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    
+        .modal-content {
+            background-color: #1D1A31;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                &:hover, &:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+            
+            .modal-text {
+                padding: 20px;
+                text-align: center;
+            }
+            
+        }
+    }
+}
+
+
+

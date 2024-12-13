@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+    <h1>C'est parti pour le Bingso !</h1>
+    <div class="container">
+        <div id="bingo-board">
+            <div class="bingo-cell row-1 column-1 diag-1"></div>
+            <div class="bingo-cell row-1 column-2"></div>
+            <div class="bingo-cell row-1 column-3"></div>
+            <div class="bingo-cell row-1 column-4"></div>
+            <div class="bingo-cell row-1 column-5 diag-2"></div>
+
+            <div class="bingo-cell row-2 column-1"></div>
+            <div class="bingo-cell row-2 column-2 diag-1"></div>
+            <div class="bingo-cell row-2 column-3"></div>
+            <div class="bingo-cell row-2 column-4 diag-2"></div>
+            <div class="bingo-cell row-2 column-5"></div>
+
+            <div class="bingo-cell row-3 column-1"></div>
+            <div class="bingo-cell row-3 column-2"></div>
+            <div class="bingo-cell row-3 column-3 diag-1 diag-2 no-check">
+                <img class="free-cell" src="assets/img/so.png" alt="Case gratuite">
+            </div>
+            <div class="bingo-cell row-3 column-4"></div>
+            <div class="bingo-cell row-3 column-5"></div>
+
+            <div class="bingo-cell row-4 column-1"></div>
+            <div class="bingo-cell row-4 column-2 diag-2"></div>
+            <div class="bingo-cell row-4 column-3"></div>
+            <div class="bingo-cell row-4 column-4 diag-1"></div>
+            <div class="bingo-cell row-4 column-5"></div>
+
+            <div class="bingo-cell row-5 column-1 diag-2"></div>
+            <div class="bingo-cell row-5 column-2"></div>
+            <div class="bingo-cell row-5 column-3"></div>
+            <div class="bingo-cell row-5 column-4"></div>
+            <div class="bingo-cell row-5 column-5 diag-1"></div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-text">
+                    <p>BingSo !!!!!</p>
+                    <button class="reset-button">Rejouer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/bingo.js"></script>
+</body>
+
+</html>
