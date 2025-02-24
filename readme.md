@@ -1,8 +1,8 @@
-# Bingso
+# BingKette
 
 ## Présentation
 
-**Bingso** est le jeu de bingo ayant pour thème le streamer Neoffise créé par sa vieweuse préférée **Pikashoup**.
+**BingKette** est le jeu de bingo ayant pour thème la streameuse BiketteOx créé par **l'élite de ses viewers**.
 
 ## Langages utilisés
 
